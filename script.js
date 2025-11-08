@@ -90,4 +90,16 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+
+// ===== Effet dégradé sur le header au scroll =====
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 30) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
+
 console.log("✅ Mon Univers Cash - Script.js chargé avec succès");

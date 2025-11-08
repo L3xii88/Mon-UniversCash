@@ -338,3 +338,28 @@ footer {
   border: none;
   border-radius: 12px;
 }
+/* ===== HEADER STICKY + EFFET TRANSPARENT ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 191, 255, 0.7); /* bleu ciel transparent */
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  background: linear-gradient(90deg, #00bfff, #f5a623);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Pour éviter que le contenu ne passe sous le header */
+body {
+  padding-top: 90px; /* ajuste selon la hauteur du header */
+}
