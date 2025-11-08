@@ -101,5 +101,20 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// ===== MENU BURGER MOBILE =====
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+
+// Gestion des sous-menus sur mobile
+const dropdowns = document.querySelectorAll(".dropdown");
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", () => {
+    drop.classList.toggle("open");
+  });
+});
 
 console.log("✅ Mon Univers Cash - Script.js chargé avec succès");
