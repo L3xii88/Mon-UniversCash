@@ -365,7 +365,7 @@ body {
 }
 /* ===== MENU BURGER RESPONSIVE ===== */
 .menu-toggle {
-  display: none;
+  display: none; /* ✅ Caché par défaut sur PC */
   font-size: 2rem;
   cursor: pointer;
   color: white;
@@ -373,6 +373,7 @@ body {
   border: none;
 }
 
+/* ✅ S’affiche uniquement sur mobile et tablette */
 @media (max-width: 900px) {
   .menu-toggle {
     display: block;
@@ -383,7 +384,7 @@ body {
     flex-direction: column;
     background: rgba(0, 191, 255, 0.95);
     position: absolute;
-    top: 70px; /* hauteur du header */
+    top: 70px;
     right: 0;
     width: 100%;
     text-align: center;
@@ -393,34 +394,5 @@ body {
 
   .navbar.active {
     display: flex;
-  }
-
-  .navbar a, .dropdown .dropbtn {
-    margin: 0.5rem 0;
-    color: white;
-    font-size: 1.1rem;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: transparent;
-  }
-
-  .dropdown-content a {
-    color: #fff4cc;
-    padding: 0.5rem 1rem;
-  }
-
-  .dropdown-content a:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: none; /* désactive hover sur mobile */
-  }
-
-  .dropdown.open .dropdown-content {
-    display: block;
   }
 }
